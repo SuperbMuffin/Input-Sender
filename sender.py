@@ -7,11 +7,10 @@ from discord.ext import commands
 import threading
 import sounddevice as sd
 import numpy as np
-import vc_id
-import sender_token
+import vars
 # Your bot token and voice channel ID
-BOT_TOKEN = sender_token.token
-VOICE_CHANNEL_ID = vc_id.vc_id
+BOT_TOKEN = vars.s_token
+VOICE_CHANNEL_ID = vars.vc_id
 
 # Discord setup
 intents = discord.Intents.default()
