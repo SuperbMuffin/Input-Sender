@@ -4,11 +4,10 @@ import keyboard
 from pynput import mouse
 import sounddevice as sd
 import numpy as np
-import vc_id
-import receiver_token
+import vars
 # Discord bot setup
-BOT_TOKEN = receiver_token.token
-CHANNEL_ID = vc_id.vc_id
+BOT_TOKEN = vars.token
+CHANNEL_ID = vars.vc_id
 
 # Discord client
 client = discord.Client()
