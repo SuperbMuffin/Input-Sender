@@ -1,3 +1,3 @@
-sender_token = ''
+s_token = ''
 r_token = ''
 vc_id = ''
