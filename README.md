@@ -24,4 +24,4 @@ This Program uses discord to communicate similarly to a modem but using a discor
 21. The other person needs to have python installed (Install it at [python.org](python.org) then must run the "main.py" file
 22. You and your friend have to decide who will play the game and who will send inputs.
 23. Each of you must run the "main.py" file and select accordingly.
-24. The friend playing the game will stream the gameplay to you while you have the program in focus and then anytime you press a button it will beb pressed on there side which means you can play games in which one person plays with wasd and one person plays with arrow keys without being on the same computer as them.
+24. The friend playing the game will stream the gameplay to you while you have the program in focus and then anytime you press a button it will be pressed on there side which means you can play games in which one person plays with wasd and one person plays with arrow keys without being on the same computer as them.
