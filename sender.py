@@ -1,7 +1,6 @@
 import discord
 import asyncio
 import keyboard
-from pynput import mouse
 import tkinter as tk
 from tkinter import ttk
 from discord.ext import commands
