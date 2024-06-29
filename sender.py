@@ -9,8 +9,9 @@ import threading
 import sounddevice as sd
 import numpy as np
 import vc_id
+import sender_token
 # Your bot token and voice channel ID
-BOT_TOKEN = '' # Put you Receiver Bot Token
+BOT_TOKEN = sender_token.token
 VOICE_CHANNEL_ID = vc_id.vc_id
 
 # Discord setup
