@@ -45,22 +45,14 @@ convert_wasd_to_arrows = False
 def toggle_send_inputs():
     global send_inputs
     send_inputs = send_inputs_var.get()
-    print(f"Send Inputs: {send_inputs}")
-
-def toggle_send_mouse_inputs():
-    global send_mouse_inputs
-    send_mouse_inputs = send_mouse_inputs_var.get()
-    print(f"Send Mouse Inputs: {send_mouse_inputs}")
 
 def toggle_convert_arrows_to_wasd():
     global convert_arrows_to_wasd
     convert_arrows_to_wasd = convert_arrows_to_wasd_var.get()
-    print(f"Convert Arrows to WASD: {convert_arrows_to_wasd}")
 
 def toggle_convert_wasd_to_arrows():
     global convert_wasd_to_arrows
     convert_wasd_to_arrows = convert_wasd_to_arrows_var.get()
-    print(f"Convert WASD to Arrows: {convert_wasd_to_arrows}")
 
 ttk.Checkbutton(root, text="Send Inputs", variable=send_inputs_var, command=toggle_send_inputs).pack()
 ttk.Checkbutton(root, text="Convert Arrows to WASD", variable=convert_arrows_to_wasd_var, command=toggle_convert_arrows_to_wasd).pack()
@@ -165,28 +157,8 @@ def process_key_event(event_name):
             elif event_name == 'd':
                 event_name = 'right'
         asyncio.run(send_inputs_to_vc(event_name))
-    print(f"Key pressed: {event_name}")
-
-def process_mouse_event(event_type):
-    if send_mouse_inputs:
-        asyncio.run(send_inputs_to_vc(event_type))
-    print(f"Mouse event: {event_type}")
-
-# Use pynput for mouse events
-def on_move(x, y):
-    process_mouse_event('move')
-
-def on_click(x, y, button, pressed):
-    if pressed:
-        process_mouse_event('click')
-
-def on_scroll(x, y, dx, dy):
-    process_mouse_event('scroll')
 
 keyboard.on_press(lambda event: process_key_event(event.name))
-
-mouse_listener = mouse.Listener(on_move=on_move, on_click=on_click, on_scroll=on_scroll)
-mouse_listener.start()
 
 def run_bot():
     bot.run(BOT_TOKEN)
