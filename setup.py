@@ -17,6 +17,7 @@ def submit():
     write_to_file("vc_id.py", f"vc_id = {vc_id} # Setup Complete")
     write_to_file("sender_token.py", f"token=\"{sender_token}\"")
     write_to_file("receiver_token.py", f"token=\"{receiver_token}\"")
+    messagebox.showwarning("Setup Donw", "You may now close the windows")
 # Create main window
 root = tk.Tk()
 root.title("Setup")
