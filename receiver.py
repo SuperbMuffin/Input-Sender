@@ -5,8 +5,9 @@ from pynput import mouse
 import sounddevice as sd
 import numpy as np
 import vc_id
+import receiver_token
 # Discord bot setup
-BOT_TOKEN = '' # Put Your Bot Token Here
+BOT_TOKEN = receiver_token.token
 CHANNEL_ID = vc_id.vc_id
 
 # Discord client
