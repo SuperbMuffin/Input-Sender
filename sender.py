@@ -34,7 +34,6 @@ root.title("Input Sender")
 
 # GUI variables
 send_inputs_var = tk.BooleanVar()
-send_mouse_inputs_var = tk.BooleanVar()
 convert_arrows_to_wasd_var = tk.BooleanVar()
 convert_wasd_to_arrows_var = tk.BooleanVar()
 
