@@ -63,7 +63,6 @@ def toggle_convert_wasd_to_arrows():
     print(f"Convert WASD to Arrows: {convert_wasd_to_arrows}")
 
 ttk.Checkbutton(root, text="Send Inputs", variable=send_inputs_var, command=toggle_send_inputs).pack()
-ttk.Checkbutton(root, text="Send Mouse Inputs", variable=send_mouse_inputs_var, command=toggle_send_mouse_inputs).pack()
 ttk.Checkbutton(root, text="Convert Arrows to WASD", variable=convert_arrows_to_wasd_var, command=toggle_convert_arrows_to_wasd).pack()
 ttk.Checkbutton(root, text="Convert WASD to Arrows", variable=convert_wasd_to_arrows_var, command=toggle_convert_wasd_to_arrows).pack()
 
@@ -76,16 +75,67 @@ async def send_inputs_to_vc(inputs):
         duration = 0.05  # seconds
         sample_rate = 44100  # Hz
         
-        frequencies = {
-            'w': 523.25,      # Hz (C5)
-            'a': 466.16,      # Hz (A#4)
-            's': 493.88,      # Hz (B4)
-            'd': 440.0,       # Hz (A4)
-            'up': 659.25,     # Hz (E5)
-            'left': 622.25,   # Hz (D#5)
-            'down': 698.46,   # Hz (F5)
-            'right': 587.33,  # Hz (D5)
-            'space': 880.0    # Hz (A5)
+        key_frequencies = {
+            'a': 261.63,
+            'b': 277.18,
+            'c': 293.66,
+            'd': 311.13,
+            'e': 329.63,
+            'f': 349.23,
+            'g': 369.99,
+            'h': 392.00,
+            'i': 415.30,
+            'j': 440.00,
+            'k': 466.16,
+            'l': 493.88,
+            'm': 523.25,
+            'n': 554.37,
+            'o': 587.33,
+            'p': 622.25,
+            'q': 659.25,
+            'r': 698.46,
+            's': 739.99,
+            't': 783.99,
+            'u': 830.61,
+            'v': 880.00,
+            'w': 932.33,
+            'x': 987.77,
+            'y': 1046.50,
+            'z': 1108.73,
+            '0': 1174.66,
+            '1': 1244.51,
+            '2': 1318.51,
+            '3': 1396.91,
+            '4': 1479.98,
+            '5': 1567.98,
+            '6': 1661.22,
+            '7': 1760.00,
+            '8': 1864.66,
+            '9': 1975.53,
+            'up': 2093.00,
+            'down': 2217.46,
+            'left': 2349.32,
+            'right': 2489.02,
+            'space': 2637.02,
+            'enter': 2793.83,
+            'backspace': 2960.00,
+            'tab': 3135.96,
+            'shift': 3322.44,
+            'ctrl': 3520.00,
+            'alt': 3729.31,
+            'esc': 3951.07,
+            'f1': 4186.01,
+            'f2': 4434.92,
+            'f3': 4698.63,
+            'f4': 4978.03,
+            'f5': 5274.04,
+            'f6': 5587.65,
+            'f7': 5919.91,
+            'f8': 6271.93,
+            'f9': 6644.88,
+            'f10': 7040.00,
+            'f11': 7458.62,
+            'f12': 7902.13
         }
 
         frequency = frequencies.get(inputs, 440.0)  # Default to 440 Hz (A4) if input not found
