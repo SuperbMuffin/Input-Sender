@@ -35,9 +35,10 @@ root.title("Input Sender")
 send_inputs_var = tk.BooleanVar()
 convert_arrows_to_wasd_var = tk.BooleanVar()
 convert_wasd_to_arrows_var = tk.BooleanVar()
+micro_mages_var = tk.BooleanVar()
 
+micro_mages = False
 send_inputs = False
-send_mouse_inputs = False
 convert_arrows_to_wasd = False
 convert_wasd_to_arrows = False
 
@@ -53,9 +54,14 @@ def toggle_convert_wasd_to_arrows():
     global convert_wasd_to_arrows
     convert_wasd_to_arrows = convert_wasd_to_arrows_var.get()
 
+def toggle_micro_mages():
+    global micro_mages
+    micro_mages = micro_mages_var.get()
+
 ttk.Checkbutton(root, text="Send Inputs", variable=send_inputs_var, command=toggle_send_inputs).pack()
 ttk.Checkbutton(root, text="Convert Arrows to WASD", variable=convert_arrows_to_wasd_var, command=toggle_convert_arrows_to_wasd).pack()
 ttk.Checkbutton(root, text="Convert WASD to Arrows", variable=convert_wasd_to_arrows_var, command=toggle_convert_wasd_to_arrows).pack()
+ttk.Checkbutton(root, text="Micro Mages", variable=micro_mages_var, command=toggle_micro_mages).pack()
 
 
 # Keyboard and mouse input handlers
@@ -128,7 +134,7 @@ async def send_inputs_to_vc(inputs):
             'f11': 7458.62,
             'f12': 7902.13
         }
-
+        inputs = inputs.lowercase()
         frequency = frequencies.get(inputs, 440.0)  # Default to 440 Hz (A4) if input not found
 
         t = np.linspace(0, duration, int(sample_rate * duration), False)
@@ -155,6 +161,19 @@ def process_key_event(event_name):
                 event_name = 'left'
             elif event_name == 'd':
                 event_name = 'right'
+        elif micro_mages:
+            if event_name == 'w':
+                event_name = 'up'
+            elif event_name == 's':
+                event_name = 'down'
+            elif event_name == 'a':
+                event_name = 'left'
+            elif event_name == 'd':
+                event_name = 'right'
+            elif event_name == 'space':
+                event_name = 'shift'
+            elif event_name == 'q'
+                event_name = 'ctrl
         asyncio.run(send_inputs_to_vc(event_name))
 
 keyboard.on_press(lambda event: process_key_event(event.name))
