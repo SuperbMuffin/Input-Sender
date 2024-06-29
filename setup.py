@@ -5,19 +5,15 @@ def write_to_file(file_path, text):
     try:
         with open(file_path, 'w') as file:
             file.write(text)
-        print(f"Successfully wrote to {file_path}")
     except Exception as e:
-        print(f"An error occurred: {e}")
 
 
 def submit():
     vc_id = vc_id_entry.get()
     sender_token = sender_token_entry.get()
     receiver_token = receiver_token_entry.get()
-    write_to_file("vc_id.py", f"vc_id = {vc_id} # Setup Complete")
-    write_to_file("sender_token.py", f"token=\"{sender_token}\"")
-    write_to_file("receiver_token.py", f"token=\"{receiver_token}\"")
-    messagebox.showwarning("Setup Donw", "You may now close the windows")
+    write_to_file("vars.py", f"vc_id = {vc_id} \n s_token = \"{sender_token}\" \n r_token = \"{reicever_token}\"")
+    messagebox.showwarning("Setup Done", "You may now close the windows")
 # Create main window
 root = tk.Tk()
 root.title("Setup")
