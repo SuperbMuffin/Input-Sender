@@ -2,6 +2,15 @@ import sys
 import tkinter as tk
 from tkinter import messagebox
 import subprocess
+if sys.platform == "win32":
+    import ctypes
+    ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
+else:
+    # For non-Windows systems, we need to redirect output to avoid opening a terminal window.
+    import os
+    sys.stdout = open(os.devnull, 'w')
+    sys.stderr = open(os.devnull, 'w')
+
 
 # Checks If Set Up
 if not vars.setup
