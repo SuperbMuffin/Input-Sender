@@ -10,8 +10,7 @@ else:
     sys.stdout = open(os.devnull, 'w')
     sys.stderr = open(os.devnull, 'w')
 
-# Your script code below
-print("This script runs without a visible console window.")
+
 def write_to_file(file_path, text):
         with open(file_path, 'w') as file:
             file.write(text)
