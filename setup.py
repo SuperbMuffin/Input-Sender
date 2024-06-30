@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 import sys
 if sys.platform == "win32":
     import ctypes
@@ -12,16 +13,18 @@ else:
 
 
 def write_to_file(file_path, text):
-        with open(file_path, 'w') as file:
-            file.write(text)
+    with open(file_path, 'w') as file:
+        file.write(text)
 
 
 def submit():
     vc_id = vc_id_entry.get()
     sender_token = sender_token_entry.get()
     receiver_token = receiver_token_entry.get()
-    write_to_file("vars.py", f"vc_id = {vc_id} \n s_token = \"{sender_token}\" \n r_token = \"{reicever_token}\"\n setup = True")
-    tk.messagebox("Setup Done", "You may now close the windows")
+    write_to_file("vars.py", f"vc_id = {vc_id}\ns_token = \"{sender_token}\"\nr_token = \"{receiver_token}\"\nsetup = True")
+    messagebox.showinfo("Setup Done", "You may now close the window")
+
+
 # Create main window
 root = tk.Tk()
 root.title("Setup")
