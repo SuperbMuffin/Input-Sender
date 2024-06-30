@@ -12,7 +12,7 @@ def submit():
     vc_id = vc_id_entry.get()
     sender_token = sender_token_entry.get()
     receiver_token = receiver_token_entry.get()
-    write_to_file("vars.py", f"vc_id = {vc_id} \n s_token = \"{sender_token}\" \n r_token = \"{reicever_token}\"")
+    write_to_file("vars.py", f"vc_id = {vc_id} \n s_token = \"{sender_token}\" \n r_token = \"{reicever_token}\"\n setup = True")
     messagebox.showwarning("Setup Done", "You may now close the windows")
 # Create main window
 root = tk.Tk()
