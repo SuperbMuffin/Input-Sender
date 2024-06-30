@@ -27,7 +27,7 @@ This program utilizes Discord as a communication platform akin to a modem, facil
 9. At the bottom, there should be a URL. Paste this into your browser and invite the bot to your Discord server.
 
 ### 4. Create the Second Bot (Receiver)
-- Repeat steps 3-9, but create a bot named "Receiver".
+- Repeat step 3, but create a bot named "Receiver".
 
 ### 5. Set Up Your Server
 1. In your Discord server, you should see both bots under the offline members.
