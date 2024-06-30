@@ -47,13 +47,15 @@ This Program uses discord to communicate similarly to a modem but using a discor
 
 ### 9. Download and Set Up the Repository
 1. Go to [this repository](#) and click on the green "Code" button, then download the zip file.
-2. Unzip the file and run `Setup.py`.
-3. Fill in all the fields with the information you obtained beforehand.
-4. Zip the folder again and send it to someone.
+2. Run `pip install -r requirements.txt` in your terminal.
+3. Unzip the file and run `Setup.py`.
+4. Fill in all the fields with the information you obtained beforehand.
+5. Zip the folder again and send it to someone.
 
 ### 10. Running the Program
 - The other person needs to have Python installed (install it from [python.org](https://www.python.org/)).
-- They must run the `main.py` file.
+- The other person needs to also run `pip install -r requirements.txt` in their terminal.
+- They must then run the `main.py` file.
 - You and your friend have to decide who will play the game and who will send inputs.
 - Each of you must run the `main.py` file and select accordingly.
 - The friend playing the game will stream the gameplay to you while you have the program in focus. Anytime you press a button, it will be pressed on their side, allowing you to play games together remotely.
