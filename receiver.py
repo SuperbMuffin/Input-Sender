@@ -5,8 +5,14 @@ from pynput import mouse
 import sounddevice as sd
 import numpy as np
 import vars
+
+# Checks If Set Up
+if not vars.setup
+    tk.messagebox("Run setup.py", "Fill In The Info")
+    os.system("python setup.py")
+    sys.exit()
 # Discord bot setup
-BOT_TOKEN = vars.token
+BOT_TOKEN = vars.r_token
 CHANNEL_ID = vars.vc_id
 
 # Discord client
