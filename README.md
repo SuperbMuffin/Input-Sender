@@ -1,5 +1,5 @@
-# <span style="color:red">WINDOWS ONLY</span>
-
+# Important
+If you are running this program on a os other then windows please run the files in the other dir because .pyw doesnt work on mac and other os's.
 # What It Does
 This program utilizes Discord as a communication platform akin to a modem, facilitating the transmission of inputs between devices via a designated Discord channel. This enables multiplayer gaming experiences traditionally confined to local environments, where players can interact as if they were sharing the same physical space.
 # How To Use It
