@@ -55,7 +55,7 @@ This program utilizes Discord as a communication platform akin to a modem, facil
 ### 10. Running the Program
 - The other person needs to have Python installed (install it from [python.org](https://www.python.org/)).
 - The other person needs to also run `pip install -r requirements.txt` in their terminal.
-- They must then run the `main.py` file.
+- They must then run the `main.py` file. Please note if the file immediatly closes it is becasue you did not setup the program.
 - You and your friend have to decide who will play the game and who will send inputs.
 - Each of you must run the `main.py` file and select accordingly.
 - The friend playing the game will stream the gameplay to you while you have the program in focus. Anytime you press a button, it will be pressed on their side, allowing you to play games together remotely.
