@@ -14,7 +14,7 @@ else:
 
 # Checks If Set Up
 if not vars.setup
-    tk.messagebox("Run setup.py", "Fill In The Info")
+   messagebox.showinfo("Run setup.py", "Program not setup")
     os.system("python setup.py")
     sys.exit()
 
