@@ -19,8 +19,7 @@ else:
     sys.stdout = open(os.devnull, 'w')
     sys.stderr = open(os.devnull, 'w')
 
-# Your script code below
-print("This script runs without a visible console window.")
+
 # Checks If Set Up
 if not vars.setup
     tk.messagebox("Run setup.py", "Fill In The Info")
