@@ -8,9 +8,9 @@ This program utilizes Discord as a communication platform akin to a modem, facil
 ### 2. Create a Discord Server
 1. If you don't already have a Discord account, create one at [discord.com](https://discord.com/).
 2. Create a new Discord server:
-  1. Open Discord.
-  2. Click the "+" button on the left sidebar.
-  3. Follow the prompts to create a new server with only yourself as a member.
+   - Open Discord.
+   - Click the "+" button on the left sidebar.
+   - Follow the prompts to create a new server with only yourself as a member.
 
 ### 3. Create the First Bot (Sender)
 1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
