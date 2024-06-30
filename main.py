@@ -12,7 +12,7 @@ if not vars.setup
 def trigger_sender():
     subprocess.run(["python", "sender.py"])
     sys.exit()
-
+    
 def trigger_receiver():
     subprocess.run(["python", "receiver.py"])
     sys.exit()
