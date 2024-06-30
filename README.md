@@ -7,8 +7,8 @@ This Program uses discord to communicate similarly to a modem but using a discor
 - Download and install Python from [python.org](https://www.python.org/downloads/).
 
 ### 2. Create a Discord Server
-- If you don't already have a Discord account, create one at [discord.com](https://discord.com/).
-- Create a new Discord server:
+1. If you don't already have a Discord account, create one at [discord.com](https://discord.com/).
+2. Create a new Discord server:
   1. Open Discord.
   2. Click the "+" button on the left sidebar.
   3. Follow the prompts to create a new server with only yourself as a member.
