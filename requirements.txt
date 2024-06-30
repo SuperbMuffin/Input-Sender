@@ -1,0 +1,6 @@
+# requirements.txt. Used to easily downlaod all dependecies
+discord.py
+keyboard
+pynput
+sounddevice
+numpy
