@@ -3,6 +3,12 @@ import tkinter as tk
 from tkinter import messagebox
 import subprocess
 
+# Checks If Set Up
+if not vars.setup
+    tk.messagebox("Run setup.py", "Fill In The Info")
+    os.system("python setup.py")
+    sys.exit()
+
 def trigger_sender():
     subprocess.run(["python", "sender.py"])
     sys.exit()
