@@ -1,6 +1,5 @@
 # What It Does
-This Program uses discord to communicate similarly to a modem but using a discord channel it sends inputs from one device to another were it is then simulated this allows playing games which have  "On Same Couch MultiPlayer".
-
+This program utilizes Discord as a communication platform akin to a modem, facilitating the transmission of inputs between devices via a designated Discord channel. This enables multiplayer gaming experiences traditionally confined to local environments, where players can interact as if they were sharing the same physical space.
 # How To Use It
 
 ### 1. Install Python
