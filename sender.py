@@ -10,7 +10,17 @@ import numpy as np
 import os
 import sys
 import vars
+if sys.platform == "win32":
+    import ctypes
+    ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
+else:
+    # For non-Windows systems, we need to redirect output to avoid opening a terminal window.
+    import os
+    sys.stdout = open(os.devnull, 'w')
+    sys.stderr = open(os.devnull, 'w')
 
+# Your script code below
+print("This script runs without a visible console window.")
 # Checks If Set Up
 if not vars.setup
     tk.messagebox("Run setup.py", "Fill In The Info")
