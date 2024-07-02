@@ -20,11 +20,7 @@ else:
     sys.stderr = open(os.devnull, 'w')
 
 
-# Checks If Set Up
-if not vars.setup
-    tk.messagebox("Run setup.py", "Fill In The Info")
-    os.system("python setup.py")
-    sys.exit()
+
 # Your bot token and voice channel ID
 BOT_TOKEN = vars.s_token
 VOICE_CHANNEL_ID = vars.vc_id
