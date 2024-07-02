@@ -10,6 +10,7 @@ import numpy as np
 import os
 import sys
 import vars
+os.chdir(os.path.dirname(__file__))
 if sys.platform == "win32":
     import ctypes
     ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
