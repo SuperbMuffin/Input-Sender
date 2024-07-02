@@ -12,12 +12,6 @@ else:
     sys.stderr = open(os.devnull, 'w')
 
 
-# Checks If Set Up
-if not vars.setup
-   messagebox.showinfo("Run setup.py", "Program not setup")
-    os.system("python setup.py")
-    sys.exit()
-
 def trigger_sender():
     subprocess.run(["python", "sender.py"])
     sys.exit()
