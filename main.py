@@ -2,6 +2,7 @@ import sys
 import tkinter as tk
 from tkinter import messagebox
 import subprocess
+os.chdir(os.path.dirname(__file__))
 if sys.platform == "win32":
     import ctypes
     ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
