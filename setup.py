@@ -2,6 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import sys
+import os
+# Change CWD to the place where vars.py is so it can edit it.
+os.chdir(os.path.dirname(__file__))
+# Remove Terminal
 if sys.platform == "win32":
     import ctypes
     ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
