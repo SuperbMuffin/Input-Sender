@@ -147,7 +147,7 @@ async def send_inputs_to_vc(inputs):
             'f12': 7902.13
         }
         inputs = inputs.lowercase()
-        frequency = frequencies.get(inputs, 440.0)  # Default to 440 Hz (A4) if input not found
+        frequency = key_frequencies.get(inputs, 440.0)  # Default to 440 Hz (A4) if input not found
 
         t = np.linspace(0, duration, int(sample_rate * duration), False)
         tone = 0.5 * np.sin(frequency * 2 * np.pi * t)  # Adjust amplitude (0.5 for half volume)
@@ -184,8 +184,8 @@ def process_key_event(event_name):
                 event_name = 'right'
             elif event_name == 'space':
                 event_name = 'shift'
-            elif event_name == 'q'
-                event_name = 'ctrl
+            elif event_name == 'q':
+                event_name = 'ctrl'
         asyncio.run(send_inputs_to_vc(event_name))
 
 keyboard.on_press(lambda event: process_key_event(event.name))
