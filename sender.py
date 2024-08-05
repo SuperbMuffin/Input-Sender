@@ -151,7 +151,7 @@ async def send_inputs_to_vc(inputs):
         frequency = key_frequencies.get(inputs, 440.0)  # Default to 440 Hz (A4) if input not found
 
         t = np.linspace(0, duration, int(sample_rate * duration), False)
-        tone = 0.5 * np.sin(frequency * 2 * np.pi * t)  # Adjust amplitude (0.5 for half volume)
+        tone = 0.5 * np.sin(frequency * 5 * np.pi * t)  # Adjust amplitude (0.5 for half volume)
         sd.play(tone, sample_rate)
         sd.wait()
 def process_key_event(event_name):
